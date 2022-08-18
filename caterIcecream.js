@@ -58,7 +58,7 @@ class coldStone{
         originalCakes = ["DQ Round", "DQ Sheet"]
         blizzardCakes = ["OREO Blizzard","Choco Brownie Xtreme","Reese's Peanut Butter Cup","Chocolate Chip Cookie Dough"]
     }
-    class aftersIC{
+class aftersIC{
     function baseMenu():
         premiumHandcrafted = ["Mango Sorbet","Cookie Monster","Dark Matter Brownie Batter","Frozen Hot Cocoa","Mint Monster","Cookie Butter","Triple C's","Milk & Cereal","Madagascar Vanilla","French Toast Churro","Jasmine Milk Tea","French Toast Churro","Jasmine Milk Tea","Strawberry Cookie Crunch","Thai Tea","Saigon Coffee", SeasonalFlavors: "Salty Oreo","Ube Brownie"]
         icecreamScoops = ["Single Scoop","Double Scoop","Triple Scoop","Hand-Scooped Pint","Hand-Scooped Quart"]
@@ -111,7 +111,7 @@ class coldStone{
     bunsalaCarte = [GlazedDonut: 3.95, Non-GlazedDonut: 3.95]
     toppingsalaCarte = [Mochi: 0.75, AftersFlakes: 0.75, CrushedOreos: 0.75, CapnCrunch: 0.75, GummyBears: 0.75, FruityPebbles: 0.75, CinnamonToastCrunch: 0.75, RainbowSprinkles: 0.75, CookieCrisp: 0.75]
     }
-    class creamistry{
+class creamistry{
         function creamistryOfferings():
         creationSize = ["Regular","Large"]
         base = ["Premium","Cashew","Coconut"]
