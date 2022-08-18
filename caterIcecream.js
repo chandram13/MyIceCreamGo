@@ -14,30 +14,25 @@ class cateringIce{
 class coldStone{
         createyourOwn = {Sizes:"Like It","Love It","Gotta Have It",Flavor:"Silk Chocolate Almondmilk Frozen Dessert","Chocolate","Cotton Candy","Mint","Pistachio","Sweet Cream","Cake Batter","Classic Cookie Dough","Dark Chocolate","OREO Creme","Raspberry","Vanilla Lite","Cheesecake","Coffee","French Vanilla","Peanut Butter Cookie Dough","Strawberry","Strawberry Sorbet",Mix-In:"None","Banana","Butterfinger","Chocolate Chips","Coconut","Fudge Topping","Gummy Bears","M&M's","Peanut Butter","Blue Frosting","Blueberries","Carmel Topping","Chocolate Shavings","Devil's Food Cake","GOLDEN OREO Cookie","Heath Bar","Marshmallows","Peanuts","Rainbow Sprinkles","REESE'S Peanut Butter Sauce","Snickers","Twix","White Chocolate Chips","Apple Pie Filling","Brownie","Chocolate Chip Cookie Dough","Cinnamon","Frosting","Graham Cracker Pie Crust","Kit Kat","OREO Cookie","Pecans","Raspberries","Red Velvet Cake","Strawberries","Walnuts","Yellow Cake",Additonal10MixIns:"Blue Frosting","Blueberries","Caramel Topping","Chocolate Shavings","Devil's Food Cake","GOLDEN OREO Cookie","Heath Bar","Marshmallows","Peanuts","Rainbow Sprinkles","REESE'S Peanut Butter Sauce","Snickers","Twix","White Chocolate Chips","Apple Pie Filling","Brownie","Chocolate Chip Cookie Dough","Cinnamon","Frosting","Graham Cracker Pie Crust","Kit Kat","OREO Cookie","Pecans","Raspberries","Red Velvet Cake","Strawberries","Walnuts","Yellow Cake","Banana","Butterfinger","Chocolate Chips","Coconut","Fudge Topping","Gummy Bears","M&M's","Peanut Butter","Pineapple Tidbits","REESE'S Peanut Butter Cups","Roasted Almonds","Sugar Crystals","Whipped Topping",Cone/Bowl:"None","Plain Waffle Cone","Plain Waffle Bowl","Sugar Cone"}
         mixgocreateyourOwn = {Size:"Mine (pint)","Ours (quart)","Everybody's (triple pint)",Flavor:"Silk Chocolate Almondmilk Frozen Dessert","Chocolate","Cotton Candy","Mint","Pistachio","Sweet Cream","Cake Batter","Classic Cookie Dough","Dark Chocolate","OREO Creme","Raspberry","Vanilla Lite","Cheesecake","Coffee","French Vanilla","Peanut Butter Cookie Dough","Strawberry","Strawberry Sorbet",Mix-In:"None","Banana","Butterfinger","Chocolate Chips","Coconut","Fudge Topping","Gummy Bears","M&M's","Peanut Butter","Blue Frosting","Blueberries","Carmel Topping","Chocolate Shavings","Devil's Food Cake","GOLDEN OREO Cookie","Heath Bar","Marshmallows","Peanuts","Rainbow Sprinkles","REESE'S Peanut Butter","Snickers","Twix","White Chocolate Chips","Apple Pie Filling","Brownie","Chocolate Chip Cookie Dough","Cinnamon","Frosting","Graham Cracker Pie Crust","Kit Kat","OREO Cookie","Pecans","Raspberries","Red Velvet Cake","Strawberries","Walnuts","Yellow Cake",AdditonalMixIns:"Blue Frosting","Blueberries","Caramel Topping","Chocolate Shavings","Devil's Food Cake","GOLDEN OREO Cookie","Heath Bar","Marshmallows","Peanuts","Rainbow Sprinkles","REESE'S Peanut Butter Sauce","Snickers","Twix","White Chocolate Chips","Apple Pie Filling","Brownie","Chocolate Chip Cookie Dough","Cinnamon","Frosting","Graham Cracker Pie Crust","Kit Kat","OREO Cookie","Pecans","Raspberries","Red Velvet Cake","Strawberries","Walnuts","Yellow Cake","Banana","Butterfinger","Chocolate Chips","Coconut","Fudge Topping","Gummy Bears","M&M's","Peanut Butter","Pineapple Tidbits","REESE'S Peanut Butter Cups","Roasted Almonds","Sugar Crystals","Whipped Topping",Cone/Bowl:"Sprinkled Waffle Cone","Chocolate Dipped Waffle Bowl,$1.59","Sugar Cone","Sprinkled Waffle Bowl","Plain Waffle Cone, $0.99","Chocolate Dipped Waffle Cone","Plain Waffle Bowl"}
+        iceCreamSignatures = [Kids:"Sprinkleberry","Delicious Dirt","Bear Beary Blue",Creations:"Island Getaway","The Mighty Pink Puff","Superstar Sprinkle Blast","OREO Cookie Goldmine","OREO Cookie Confetti & Creme","Dough For It!","Somewhere Over the Rain-Dough","Birthday Cake Remix","Apple Pie A La Cold Stone","Banana Caramel Crunch","Berry Berry Berry Good","Cake Batter Batter Batter","Cheesecake Fantasy","Chocolate Devotion","Coffee Lovers Only","Cookie Doughn't You Want Some","Cookie Minster","Cookies Make Everything Better","Dough-lightful Peanut Butter","Founder's Favorite","Germanchökolätekäke","Mint Mint Chocolate Chocolate Chip","Mud Pie Mojo","One Smart Brookie","OREO Overload","Our Strawberry Blonde","Peanut Butter Cup Perfection","Reese's Peanut Butter Awesome Sauce","Surrender to Strawberry","The Way the Cookie Crumbles"]
     function csmixGo{
         myFlavor = mixgocreateyourOwn.Flavor.join(0,17)
-        pintmixIn = mixgocreateyourOwn.Mix-In.join(0,34,3)
-        while i = 0, i < mixgocreateyourOwn.Mix-In.length, i++{
-            pintmixIn += mixgocreateyourOwn.Mix-In.sort(i,3)
+        pintmixIn = [mixgocreateyourOwn.Mix-In.join(0,34,3)]
+        let i = 0; while (i < mixgocreateyourOwn.Mix-In.length){pintmixIn += mixgocreateyourOwn.Mix-In.sort(i,3); i++}
+       
+        quartmixIn = [mixgocreateyourOwn.Mix-In.join(0,34,4)]
+        let i = 0; while (i < mixgocreateyourOwn.Mix-In.length){quartmixIn += mixgocreateyourOwn.Mix-In.sort(i,4); i++}
+        
+        triplemixIn =[ mixgocreateyourOwn.Mix-In.join(0,34,6)]
+        let i = 0; while (i < mixgocreateyourOwn.Mix-In.length){triplemixIn += mixgocreateyourOwn.Mix-In.sort(i,6); i++}
+
+        myAdditional = [mixgocreateyourOwn.AdditonalMixIns.join(0,40,10)] // up to 10 (last digit)
+        let i = 0; while (i < mixgocreateyourOwn.AdditionalMix-In.length){
+            pintmixIn += mixgocreateyourOwn.AdditionalMix-Ins.sort(i,10); i++
+            quartmixIn += mixgocreateyourOwn.AdditionalMix-Ins.sort(i,10); i++
+            triplemixIn += mixgocreateyourOwn.AdditionalMixIns.sort(i,10); i++
         }
-        // update this
-        quartmixIn = mixgocreateyourOwn.Mix-In.join(0,34,4)
-        while i = 0, i < mixgocreateyourOwn.Mix-In.length, i++{
-            quartmixIn += mixgocreateyourOwn.Mix-In.sort(i,4)
-        }
-        // update this
-        triplemixIn = mixgocreateyourOwn.Mix-In.join(0,34,6)
-        while i = 0, i < mixgocreateyourOwn.Mix-In.length, i++{
-            triplemixIn += mixgocreateyourOwn.Mix-In.sort(i,6)
-        }
-        // update this
-        myAdditional = mixgocreateyourOwn.AdditonalMixIns.join(0,40,10) // up to 10 (last digit)
-        while i = 0, i < mixgocreateyourOwn.AdditionalMix-In.length, i++{
-            pintmixIn += mixgocreateyourOwn.AdditionalMix-Ins.sort(i,10)
-            quartmixIn += mixgocreateyourOwn.AdditionalMix-Ins.sort(i,10)
-            triplemixIn += mixgocreateyourOwn.AdditionalMixIns.sort(i,10)
-        }
-        // update this
+        
         myconeBowl = mixgocreateyourOwn.Cone/Bowl.join(0,6,7) // 7 toppings only 6 avail?
         mypint = mixgocreateyourOwn.size[0]+ myFlavor + pintmixIn + myAdditional + myconeBowl
         myquart = mixgocreateyourOwn.size[1] + myFlavor + quartmixIn + myAdditional + myconeBowl
@@ -49,13 +44,117 @@ class coldStone{
         shakes = ["Chocolate Silk","Cake Batter n' Shake","Milk & OREO Cookies","Oh Fudge!","REESE'S Chocolate Peanut Butter Dream","Savory Strawberry","Very Vanilla"]
         smoothies = ["Blueberry Banana","Mango Pineapple","Pineapple Blueberry","Strawberry Banana","Strawberry Mango"]
         icecreamCakes = ["Rainbow Sprinkle Road","Cake Batter Confetti","Cookie Dough Delirium","Cookies & Creamery","Midnight Delight","OREO Cookies and Cream Extreme","Strawberry Passion","Tall, Dark & Delicious"]
-        createyourownCake = [Size: "6 in Small Round","8 in Large Round","8 x 12 Small Rectangle","12 in by 18 in Large Rectangle",Flavor:"Silk Chocolate Almondmilk Frozen Dessert","Cheesecake","Coffee","French Vanilla","Peanut Butter Cookie Dough","Strawberry","Butter Pecan","Chocolate","Cotton Candy","Mint","Pistachio","Sweet Cream","Cake Batter","Classic Cookie Dough","Dark Chocolate","OREO Creme","Raspberry", "Vanilla Lite",Mix-Ins:"None","Banana","Butterfinger","Butterfinger","Chocolate Chips","Coconut","GOLDEN OREO Cookie","Heath Bar","Marshmallows","Peanut Butter","Pineapple Tidbits","REESE'S Peanut Butter Cups","Strawberries","Walnuts","Blue Frosting","Blueberries","Caramel Topping","Chocolate Shavings","Frosting","Graham Cracker Pie Crust","Kit Kat","Nilla Wafers","Peanuts","Rainbow Sprinkles","REESE'S Peanut Butter Sauce","Sugar Crystals","Whipped Topping","Apple Pie Filling","Brownie","Chocolate Chip Cookie Dough","Cinnamon","Fudge Topping","Gummy Bears","M&M's","OREO Cookie","Pecans","Raspberries","Roasted Almonds","Twix","Yellow Cake",Cake Layer: "Yellow Cake","Red Velvet Cake","Devil's Food Cake"]
-        createyourownCupcake = ["$12.99":]
-        createyourownCookie = ["$8.99":]
+        createyourownCake = [Size: "6 in Small Round","8 in Large Round","8 x 12 Small Rectangle","12 in by 18 in Large Rectangle",Flavor:"Silk Chocolate Almondmilk Frozen Dessert","Cheesecake","Coffee","French Vanilla","Peanut Butter Cookie Dough","Strawberry","Butter Pecan","Chocolate","Cotton Candy","Mint","Pistachio","Sweet Cream","Cake Batter","Classic Cookie Dough","Dark Chocolate","OREO Creme","Raspberry", "Vanilla Lite",Mix-Ins:"None","Banana","Butterfinger","Butterfinger","Chocolate Chips","Coconut","GOLDEN OREO Cookie","Heath Bar","Marshmallows","Peanut Butter","Pineapple Tidbits","REESE'S Peanut Butter Cups","Strawberries","Walnuts","Blue Frosting","Blueberries","Caramel Topping","Chocolate Shavings","Frosting","Graham Cracker Pie Crust","Kit Kat","Nilla Wafers","Peanuts","Rainbow Sprinkles","REESE'S Peanut Butter Sauce","Sugar Crystals","Whipped Topping","Apple Pie Filling","Brownie","Chocolate Chip Cookie Dough","Cinnamon","Fudge Topping","Gummy Bears","M&M's","OREO Cookie","Pecans","Raspberries","Roasted Almonds","Twix","Yellow Cake",Cake Layer: "Yellow Cake","Red Velvet Cake","Devil's Food Cake",Midlayer:"None","Caramel","Peanut Butter","Fudge","Strawberry","Fudge Ganache",Frosting:"Fluffy White","Fluffy Pink","Fluffy Green","Fluffy OREO Cookie","Fluffy Chocolate","Fluffy Orange","Fluffy Blue","Rich Fudge","Fluffy Yellow","Fluffy Purple",Topper:"None","OREO Cookies","Chocolate Chip Cookie Dough","Butterfinger","Reese's Peanut Butter Cups","Kit Kat","White & Milk Chocolate Curls","White Chocolate Chips","Rainbow Sprinkles","Strawberries","Snickers","Heath Bar","Chocolate Graduation Hat", Side Crumbling:"Chocolate Shavings Side","Graham Cracker Pie Crust Side","Rainbow Sprinkles Side",Special Messaging:"None","Congratulations","Happy Father's Day","Merry Christmas","Happy Birthday","Happy Anniversary","Happy Mother's Day","Custom Message","Best Wishes","Happy Easter","Happy Valentines Day",Special Messaging Color:"None","Green Writing","Pink Writing","Red Writing","Blue Writing","White Writing","Yellow Writing","Purple Writing"]
+        createyourownCupcake = ["$12.99":"Reese's Peanut Butter Ice Cream Cups","Sweet Cream","Double Chocolate Devotion","Cake Better Deluxe"]
+        createyourownCookie = ["$8.99":"Cake Batter Sprinkle","Cookie Crumb Yum","Kiss N'Tell Chocolate","Perfect Duet"]
+        sundaes = ["Who You Callin' Shortcake","Banana Split Decision"]
+        prePacked = ["Peanut Butter Cup Perfection","OREO Overload","Founder's Favorite","Cake Batter Batter Batter"]
+       
+    }
+    }
+    function dairyQueen{
+        blizzardTreats = {Limited Time:"Reese's Take 5","Girl Scout Thin Mints","OREO Dirt Pie","Caramel Fudge Cheesecake","DRUMSTICK with Peanuts","Cotton Candy","Very Cherry Chip",Signature:"Chocolate Chip Cookie Dough","Turtle Pecan Cluster","Choco Brownie Extreme",Candy Classics:"Oreo Cookie","Reese's Peanut Butter Cup","Butterfinger","M&M's Milk Chocolate","Heath","Snickers",Royal:"Royal New York Cheesecake","Royal Ultimate Choco Brownie"}
+        classicTreats = {Cones:"Fruity Blast Dipped","Vanilla","Chocolate Dipped",Sundaes:"Hot Fudge","Strawberry","Chocolate","Caramel","Peanut Butter","Pineapple", Royal Treats:"Peanut Buster Parfait","Banana Split","Brownie and Oreo Cupfection","Triple Chocolate Brownie",Novelties:"Non-Dairy Dilly Bar","Dilly Bar","Buster Bar Treat"}
+        originalCakes = ["DQ Round", "DQ Sheet"]
+        blizzardCakes = ["OREO Blizzard","Choco Brownie Xtreme","Reese's Peanut Butter Cup","Chocolate Chip Cookie Dough"]
+    }
+    class aftersIC{
+    function baseMenu():
+        premiumHandcrafted = ["Mango Sorbet","Cookie Monster","Dark Matter Brownie Batter","Frozen Hot Cocoa","Mint Monster","Cookie Butter","Triple C's","Milk & Cereal","Madagascar Vanilla","French Toast Churro","Jasmine Milk Tea","French Toast Churro","Jasmine Milk Tea","Strawberry Cookie Crunch","Thai Tea","Saigon Coffee", SeasonalFlavors: "Salty Oreo","Ube Brownie"]
+        icecreamScoops = ["Single Scoop","Double Scoop","Triple Scoop","Hand-Scooped Pint","Hand-Scooped Quart"]
+        icecreamToppings = ["Crushed Oreos","Mochi","Sprinkles","Afters Flakes","Gummy Bears","Cinnamon Toast Crunch","Fruity Pebbles","Capn' Crunch","Cookie Crisp"]
+        icecreamCones = ["Waffle Cone","Cake Cone"]
+        icecreamSides = ["Fresh Donut (glazed)", "Fresh Donut (non-glazed)"]
+        includedDrinks = ["Virgils Root Beer","Water","Orange Jarritos","Mexican Coke"]
+    function Scoops():
+        doubleScoopFlavor = []
+        let i = 2; while (i < premiumHandcrafted.length){doubleScoopFlavor += premiumHandcrafted.sort(i,16); i++}
+        doubleScoopToppings = []
+        let i = 0; while (i < icecreamToppings.length){doubleScoopToppings += icecreamToppings.sort(i,8); i++}
+        tripleScoopFlavor = []
+        let i = 3; while (i < premiumHandcrafted.length){tripleScoopFlavor += premiumHandcrafted.sort(i,16); i++}
+        tripleScoopToppings = []
+        let i = 0; while (i < icecreamToppings.length){tripleScoopToppings += icecreamToppings.sort(i,8); i++}
+        handScoopedpintTopping = []
+        let i = 0; while (i < icecreamToppings.length){handScoopedpintTopping += icecreamToppings.sort(i,8); i++}
+        tripleScoop = tripleScoopFlavor + tripleScoopToppings + icecreamCones.sort(0,1) + icecreamSides.sort(0,1) + includedDrinks.sort(0,3)
+        doubleScoop = doubleScoopFlavor + doubleScoopToppings + icecreamCones.sort(0,1) + icecreamSides.sort(0,1) + includedDrinks.sort(0,3)
+        singleScoop = premiumHandcrafted.sort() + icecreamToppings.sort(0,9) + icecreamCones.sort(0,1) + icecreamSides.sort(0,1) + includedDrinks.sort(0,3)
+    function Pints():
+        handScoopedPint = premiumHandcrafted.sort() + handScoopedpintTopping + icecreamCones.sort(0,1) + icecreamSides.sort(0,1) + includedDrinks.sort(0,3)
+        cookieMonsterPint = handScoopedpintTopping + icecreamCones.sort(0,1) + icecreamSides.sort(0,1) + includedDrinks.sort(0,3)
+        darkmatterbrowniebatterPint = handScoopedpintTopping + icecreamCones.sort(0,1) + icecreamSides.sort(0,1) + includedDrinks.sort(0,3)
+        saigoncoffeePint = handScoopedpintTopping + icecreamCones.sort(0,1) + icecreamSides.sort(0,1) + includedDrinks.sort(0,3)
+        milk&cerealPint = handScoopedpintTopping + icecreamCones.sort(0,1) + icecreamSides.sort(0,1) + includedDrinks.sort(0,3)
+        strawberrycookiecrunchPint = handScoopedpintTopping + icecreamCones.sort(0,1) + icecreamSides.sort(0,1) + includedDrinks.sort(0,3)
+        jasminemilkteaPint = handScoopedpintTopping + icecreamCones.sort(0,1) + icecreamSides.sort(0,1) + includedDrinks.sort(0,3)
+    function Quarts():
+    handScoopedquartTopping = []
+    let i = 0; while (i < icecreamToppings.length){handScoopedquartTopping += icecreamToppings.sort(i,8); i++}
+        handScoopedQuart = premiumHandcrafted.sort() + handScoopedpintTopping + icecreamCones.sort(0,1) + icecreamSides.sort(0,1) + includedDrinks.sort(0,3)
+        cookieMonsterQuart = handScoopedquartTopping+ icecreamCones.sort(0,1) + icecreamSides.sort(0,1) + includedDrinks.sort(0,3)
+        cookiebutterQuart = handScoopedquartTopping + icecreamCones.sort(0,1) + icecreamSides.sort(0,1) + includedDrinks.sort(0,3)
+        strawberrycookiecrunchQuart = handScoopedquartTopping + icecreamCones.sort(0,1) + icecreamSides.sort(0,1) + includedDrinks.sort(0,3)
+        darkmatterbrowniebatterQuart = handScoopedquartTopping + icecreamCones.sort(0,1) + icecreamSides.sort(0,1) + includedDrinks.sort(0,3)
+        milk&cerealQuart = handScoopedquartTopping + icecreamCones.sort(0,1) + icecreamSides.sort(0,1) + includedDrinks.sort(0,3)
+        jasminemilkteaQuart = handScoopedquartTopping + icecreamCones.sort(0,1) + icecreamSides.sort(0,1) + includedDrinks.sort(0,3)
+        saigoncoffeeQuart = handScoopedquartTopping + icecreamCones.sort(0,1) + icecreamSides.sort(0,1) + includedDrinks.sort(0,3)
+    function specialtyItems():
+    specialtyItemTopping = []
+    let i = 0; while (i < icecreamToppings.length){specialtyItemTopping += icecreamToppings.sort(i,8); i++}
+    whippedCream = ["None","Included"]
+    sauces = ["Chocolate","Caramel"]
+    specialitySundae = specialityItemTopping + whippedCream[0,1] + premiumHandcrafted.sort() + sauces[0,1]
+    specialityrootbearFloat = specialityItemTopping + whippedCream[0,1] + premiumHandcrafted.sort()
+    specialityMilkshake = whippedCream[0,1] + premiumHandcrafted.sort() + specialityItemTopping
+    icecreamBars = ["Cookie Butter","Cookie Monster","Madagascar Vanilla","Milk&Cereal","Strawberry Cookie Crunch"]
+    bunsalaCarte = [GlazedDonut: 3.95, Non-GlazedDonut: 3.95]
+    toppingsalaCarte = [Mochi: 0.75, AftersFlakes: 0.75, CrushedOreos: 0.75, CapnCrunch: 0.75, GummyBears: 0.75, FruityPebbles: 0.75, CinnamonToastCrunch: 0.75, RainbowSprinkles: 0.75, CookieCrisp: 0.75]
+    }
+    class creamistry{
+        function creamistryOfferings():
+        creationSize = ["Regular","Large"]
+        base = ["Premium","Cashew","Coconut"]
+        campfireSmores = creationSize.sort() + base.sort() + {Flavor:"Camprefire S'mores"}
+        captainsBreakfast = creationSize.sort() + base.sort() + {Flavor:"Captain's Breakfast"}
+        chocolateCombustion = creationSize.sort() + base.sort() + {Flavor: "Chocolate Combustion"}
+        cookieMonster = creationSize.sort() + base.sort() + {Flavor: "Cookie Monster"}
+        elemint = creationSize.sort() + base.sort() + {Flavor: "Elemint"}
+        lunchboxpb&jCreation = creationSize.sort() + base.sort() + {Flavor: "Lunchbox PB&J"}
+        mangonadaCreation = creationSize.sort() + base.sort() + {Flavor: "Mangonada"}
+        partyAnimal = creationSize.sort() + base.sort() + {Flavor: "Party Animal"}
+        quantamCoffee = creationSize.sort() + base.sort() + {Flavor: "Quantum Coffee"}
+        seasaltCaramel = creationSize.sort() + base.sort() + {Flavor: "Sea Salt Caramel"}
+        strawberryBond = creationSize.sort() + base.sort() + {Flavor: "Strawberry Bond"}
+        speculoosOverload = creationSize.sort() + base.sort() + {Flavor: "Speculoos Overload"}
+        tropicalParadise = creationSize.sort() + base.sort() + {Flavor: "Tropical Paradise"}
+        unicornCreation = creationSize.sort() + base.sort() + {Flavor: "Unicorn"}
+        premiumFlavors = ["Birthday Cake","Chocolate","Coconut","Cookies & Cream","Frosted Animal Cookies","Matcha Green Tea","Nutella","Strawberry","Capn' Crunch","Cinnamon Toast Crunch","Cookie Butter","Cotton Candy","Fruity Pebbles","Milk Coffee","Reese's Peanut Butter","Taro","Cheesecake","Cocoa Puffs","Cookie Monster","Fresh Banana","Madagascar Vanilla Bean","Mint","Sea Salt Caramel","Unicorn"]
+        sorbetFlavors = ["Mango","Nitrodole (Pineapple)","Pina Colada"]
+        toppings = ["Almonds","Biscoff Cookies","Capn' Crunch","Caramel","Chamoy","Cheesecake Bites","Chips Ahoy","Chocolate Fudge","Cookie Dough","Fresh Baked Brownie Bites","Fresh Banana","Fresh Strawberry","Frosted Animal Cookies","Fruity Pebbles","Graham Crackers","Heath","Marshmallow Cream","Mini Chocolate Chips","Mini Gummy Bears","Mini Marshmallows","Mochi","Nutella Sauce","Oreo","Rainbow Sprinkles","Reese's Peanut Butter Cup","Reese's Peanut Butter Sauce","Strawberry Sundae","Tajin","Takis","Unicorn Dust","Walnuts","Whipped Cream"]
+        top3toppings = []
+        let i = 0; while (i < icecreamToppings.length){top3toppings += Toppings.sort(i,31); i++}
+        iceCream1 = base.split(0,1) + premiumFlavors.sort() + base[1,2]
+        iceCream2 = base.split(0,1) + sorbetFlavors.sort() + base[1,2]
+        premiumsandwichFlavors = ["Birthday Cake","Black Sesame","Brown Butter Caramel","Brownie Batter","Capn' Crunch","Caramel","Cheesecake","Chocolate","Cinnamon Toast Crunch","Cocoa Puffs","Coconut","Cookie Butter","Cookie Monster","Cookies & Cream","Cotton Candy","Fresh Banana","Frosted Animal Cookies","Fruity Pebbles","Key Lime","Madagascar Vanilla Bean","Matcha Green Tea","Milk Coffee","Mint","Nutella","Reese's Peanut Butter","Ruby Cacao","Sea Salt Caramel","Strawberry","Taro","Thai Tea","Unicorn"]
+        sandwich = "Brownie Wich"
+        completeSandwich1 = premiumsandwichFlavors.sort() + sandwich
+        completeSandwich2 = sorbetFlavors.sort() + sandwich
+        completeSandwich3 = base[1] + premiumsandwichFlavors.sort() + sandwich
+        completeSandwich4 = base[2] + premiumsandwichFlavors.sort() + sandwich
+        top2toppings = []
+        let i = 0; while (i < icecreamToppings.length){top2toppings += Toppings.sort(i,31); i++}
+        nitroShake1 = premiumFlavors.sort() + top2toppings
+        nitroShake2 = base[1] + premiumFlavors.sort() + top2toppings
+        nitroShake3 = base[2] + premiumFlavors.sort() + top2toppings
+        nitroShake4 = sorbetFlavors.sort() + top2toppings
+        affogatowhippedCream = ["Yes","No"]
+        affogato1 = premiumFlavors.sort() + affogatowhippedCream[0,1] 
+        affogato2 = base[1] + premiumFlavors.sort() + affogatowhippedCream[0,1]
+        affotgato3 = base[2] + premiumFlavors.sort() + affogatowhippedCream[0,1]
+        pints = premiumFlavors.sort()
+        cakeSize = ["Medium","Large"]
+        signatureCakes = ["Birthday Cake (Blue)","Birthday Cake (Pink)","Chocolate","Mocha","Cookies & Cream","Strawberry Cheesecake","Vanilla"] + cakeSize.join()
 
     }
-    }
-    function dairyQueen{}
-    function aftersIC{}
-    function Creamistry{}
 }
